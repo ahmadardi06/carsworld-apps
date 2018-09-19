@@ -57,9 +57,11 @@
     
     var thumbnailImageView: CustomImageView = {
         let imageView = CustomImageView()
-        imageView.image = UIImage(named: "cardi-b")
+        imageView.image = UIImage(named: "promos1")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 5
         return imageView
     }()
     
@@ -74,7 +76,7 @@
     
     var titleVideo: UILabel = {
         let judul = UILabel()
-        judul.text = "Cardi B. I Like It ft. Maroon 5"
+        judul.text = "Mobil Apa Saja, Service Segalanya. Datang ke Carfix"
         judul.translatesAutoresizingMaskIntoConstraints = false
         judul.numberOfLines = 2
         return judul
@@ -82,7 +84,7 @@
     
     let descVideo: UITextView = {
         let judul = UITextView()
-        judul.text = "CardiB.VEVO - 1,550,342 views - 1 months ago"
+        judul.text = "Carfix - Indonesia - 1 days ago"
         judul.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
         judul.translatesAutoresizingMaskIntoConstraints = false
         judul.textColor = UIColor.lightGray

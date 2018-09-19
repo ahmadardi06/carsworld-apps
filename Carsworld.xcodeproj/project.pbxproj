@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D72E199180BD9D63A0F8FB6 /* Pods_Carsworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70055E16D9863CD4CA659A43 /* Pods_Carsworld.framework */; };
+		FA12022721522CFB0011F9AF /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12022621522CFB0011F9AF /* HistoryCell.swift */; };
+		FA12022921523B740011F9AF /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12022821523B740011F9AF /* TransactionCell.swift */; };
 		FAA108C121513183003AD703 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA108C021513183003AD703 /* AccountCell.swift */; };
 		FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */; };
 		FAC8F4B12150C9FC00BBE54E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4B02150C9FC00BBE54E /* HomeController.swift */; };
@@ -27,12 +29,15 @@
 		FAC8F4DD2150E80800BBE54E /* AccountSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4DC2150E80800BBE54E /* AccountSource.swift */; };
 		FAC8F4DF2150E81D00BBE54E /* VoucherSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4DE2150E81D00BBE54E /* VoucherSource.swift */; };
 		FAC8F4E32150FA6000BBE54E /* HotlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4E22150FA6000BBE54E /* HotlineCell.swift */; };
+		FAEC7A822151E96B0089A062 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC7A812151E96B0089A062 /* ProfileCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B1550BBE0CBDE7D9036E380 /* Pods-Carsworld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carsworld.release.xcconfig"; path = "Target Support Files/Pods-Carsworld/Pods-Carsworld.release.xcconfig"; sourceTree = "<group>"; };
 		6B5EAEB1C8B4EFEB2BF93BD3 /* Pods-Carsworld.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carsworld.debug.xcconfig"; path = "Target Support Files/Pods-Carsworld/Pods-Carsworld.debug.xcconfig"; sourceTree = "<group>"; };
 		70055E16D9863CD4CA659A43 /* Pods_Carsworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carsworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA12022621522CFB0011F9AF /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		FA12022821523B740011F9AF /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		FAA108C021513183003AD703 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		FAC8F4AB2150C9FC00BBE54E /* Carsworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carsworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		FAC8F4DC2150E80800BBE54E /* AccountSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSource.swift; sourceTree = "<group>"; };
 		FAC8F4DE2150E81D00BBE54E /* VoucherSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherSource.swift; sourceTree = "<group>"; };
 		FAC8F4E22150FA6000BBE54E /* HotlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineCell.swift; sourceTree = "<group>"; };
+		FAEC7A812151E96B0089A062 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +88,6 @@
 				6B5EAEB1C8B4EFEB2BF93BD3 /* Pods-Carsworld.debug.xcconfig */,
 				0B1550BBE0CBDE7D9036E380 /* Pods-Carsworld.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +180,9 @@
 				FAC8F4CC2150E05100BBE54E /* VoucherCell.swift */,
 				FAC8F4E22150FA6000BBE54E /* HotlineCell.swift */,
 				FAA108C021513183003AD703 /* AccountCell.swift */,
+				FAEC7A812151E96B0089A062 /* ProfileCell.swift */,
+				FA12022621522CFB0011F9AF /* HistoryCell.swift */,
+				FA12022821523B740011F9AF /* TransactionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -252,15 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Carsworld/Pods-Carsworld-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 			);
@@ -274,15 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Carsworld-checkManifestLockResult.txt",
 			);
@@ -309,11 +309,14 @@
 				FAC8F4CB2150D08900BBE54E /* BaseCell.swift in Sources */,
 				FAC8F4DF2150E81D00BBE54E /* VoucherSource.swift in Sources */,
 				FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */,
+				FA12022721522CFB0011F9AF /* HistoryCell.swift in Sources */,
 				FAA108C121513183003AD703 /* AccountCell.swift in Sources */,
 				FAC8F4D92150E75700BBE54E /* HistorySource.swift in Sources */,
 				FAC8F4DB2150E7EB00BBE54E /* HotlineSource.swift in Sources */,
 				FAC8F4D42150E10C00BBE54E /* Api.swift in Sources */,
+				FAEC7A822151E96B0089A062 /* ProfileCell.swift in Sources */,
 				FAC8F4CD2150E05100BBE54E /* VoucherCell.swift in Sources */,
+				FA12022921523B740011F9AF /* TransactionCell.swift in Sources */,
 				FAC8F4E32150FA6000BBE54E /* HotlineCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

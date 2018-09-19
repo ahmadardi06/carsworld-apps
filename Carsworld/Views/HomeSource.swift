@@ -14,7 +14,7 @@ class HomeSource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     var videos: [Voucher]?
     
     lazy var colView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout ()
+        let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor.white
         cv.dataSource = self

@@ -22,17 +22,17 @@ class VoucherSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         return cv
     }()
     
-    func setupDataApi() {
-        ApiService.sharedInstance.fetchTrending { (videos: [Voucher]) in
-            self.videos = videos
-            self.colView.reloadData()
-        }
-    }
+//    func setupDataApi() {
+//        ApiService.sharedInstance.fetchTrending { (videos: [Voucher]) in
+//            self.videos = videos
+//            self.colView.reloadData()
+//        }
+//    }
     
     override func setupViews() {
         super.setupViews()
         
-        setupDataApi()
+//        setupDataApi()
         
         addSubview(colView)
         addConstraintWithFormat(format: "H:|[v0]|", views: colView)
@@ -42,13 +42,13 @@ class VoucherSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos?.count ?? 0
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VoucherCell
         
-        cell.video = videos? [indexPath.item]
+//        cell.video = videos? [indexPath.item]
         
         return cell
     }

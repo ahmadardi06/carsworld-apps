@@ -11,7 +11,6 @@ import UIKit
 class HistorySource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
-    var videos: [Voucher]?
     
     lazy var colView: UICollectionView = {
         let layout = UICollectionViewFlowLayout ()
@@ -22,42 +21,30 @@ class HistorySource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         return cv
     }()
     
-    func setupDataApi() {
-        ApiService.sharedInstance.fetchTrending { (videos: [Voucher]) in
-            self.videos = videos
-            self.colView.reloadData()
-        }
-    }
-    
     override func setupViews() {
         super.setupViews()
-        
-        setupDataApi()
         
         addSubview(colView)
         addConstraintWithFormat(format: "H:|[v0]|", views: colView)
         addConstraintWithFormat(format: "V:|[v0]|", views: colView)
         
-        colView.register(VoucherCell.self, forCellWithReuseIdentifier: cellId)
+        colView.register(HistoryCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos?.count ?? 0
+        return 1
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VoucherCell
-        
-        cell.video = videos? [indexPath.item]
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! HistoryCell
+
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = (frame.width - 16 - 16) * 9 / 16
-        return CGSize(width: frame.width, height: height + 16 + 88)
+        return CGSize(width: frame.width, height: frame.height)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
