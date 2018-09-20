@@ -15,6 +15,8 @@ class AccountCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
     let yourCarsId = "yourCarsId"
     let socialId = "socialId"
     
+    var homeController: HomeController?
+    
     lazy var colView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -65,6 +67,7 @@ class AccountCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
         button.backgroundColor = .clear
         button.autoSetDimension(.width, toSize: 64.0)
         button.autoSetDimension(.height, toSize: 32.0)
+        button.addTarget(self, action: #selector(self.handleEdit), for: .touchUpInside)
         return button
     }()
 
@@ -79,6 +82,7 @@ class AccountCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
         button.backgroundColor = .clear
         button.autoSetDimension(.width, toSize: 96.0)
         button.autoSetDimension(.height, toSize: 32.0)
+        button.addTarget(self, action: #selector(self.handleLogout), for: .touchUpInside)
         return button
     }()
 
@@ -164,6 +168,14 @@ class AccountCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
     @objc func controlChanged() {
         let indexPath = IndexPath(item: segmentedControl.selectedSegmentIndex, section: 0)
         colView.scrollToItem(at: indexPath, at: [], animated: true)
+    }
+    
+    @objc func handleEdit(sender: UIButton) {
+        print("one")
+    }
+    
+    @objc func handleLogout() {
+        homeController?.showSignIn()
     }
     
 }

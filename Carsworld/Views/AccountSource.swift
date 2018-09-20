@@ -12,6 +12,8 @@ class AccountSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     
     let cellId = "cellId"
     
+    var homeController: HomeController?
+    
     lazy var colView: UICollectionView = {
         let layout = UICollectionViewFlowLayout ()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -37,7 +39,7 @@ class AccountSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AccountCell
-        
+        cell.homeController = homeController
         return cell
     }
     

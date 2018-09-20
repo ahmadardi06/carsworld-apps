@@ -77,17 +77,6 @@ class ServiceCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
         return cv
     }()
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.layer.borderWidth = 0.2
-        cell.layer.borderColor = UIColor.gray.cgColor
-        return cell
-    }
-    
     override func setupViews() {
         backgroundColor = .green
         
@@ -99,6 +88,17 @@ class ServiceCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
         colView.autoPinEdge(toSuperviewEdge: .left)
         colView.autoPinEdge(toSuperviewEdge: .right)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.layer.borderWidth = 0.2
+        cell.layer.borderColor = UIColor.gray.cgColor
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

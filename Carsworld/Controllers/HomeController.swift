@@ -16,6 +16,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let accountId = "accountId"
     let voucherId = "voucherId"
     
+    var homeController: HomeController?
+    
     let titleMenu = ["Carsworld","History","Hotline","Account","Voucher"]
     let warnaCarsworld = UIColor.rgb(red: 54, green: 118, blue: 203)
     
@@ -61,27 +63,33 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // membatasi untuk scroll bawahnya menu bar atas
         collectionView?.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let identifier: String
-        
         if indexPath.item == 1 {
-            identifier = historyId
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: historyId, for: indexPath) as! HistorySource
+            cell.homeController = self
+            return cell
         } else if indexPath.item == 2 {
-            identifier = hotlineId
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: hotlineId, for: indexPath) as! HotlineSource
+            cell.homeController = self
+            return cell
         } else if indexPath.item == 3 {
-            identifier = accountId
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: accountId, for: indexPath) as! AccountSource
+            cell.homeController = self
+            return cell
         } else if indexPath.item == 4 {
-            identifier = voucherId
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: voucherId, for: indexPath) as! VoucherSource
+            cell.homeController = self
+            return cell
         } else {
-            identifier = cellId
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeSource
+            cell.homeController = self
+            return cell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        
-        return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -120,12 +128,31 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.rightBarButtonItems = [goldBtn, notifBtn]
     }
     
+    @objc func showAppDetail() {
+        let appDetail = UIViewController()
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
+    @objc func showMenuDetail() {
+        let appDetail = ServiceController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
+    @objc func showSignIn() {
+        let appDetail = SignInController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
     @objc func handleGoldMember() {
-        print("under construction")
+        let layout = UICollectionViewFlowLayout()
+        let memberController = MemberController(collectionViewLayout: layout)
+        navigationController?.pushViewController(memberController, animated: false)
     }
     
     @objc func handleNotification() {
-        print("under construction")
+        let layout = UICollectionViewFlowLayout()
+        let notifikasiController = NotifikasiController(collectionViewLayout: layout)
+        navigationController?.pushViewController(notifikasiController, animated: false)
     }
     
     @objc func scrollToViewIndex(menuIndex: Int) {

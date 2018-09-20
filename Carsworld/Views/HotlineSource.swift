@@ -13,6 +13,8 @@ class HotlineSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     let cellId = "cellId"
     let headerId = "headerId"
     
+    var homeController: HomeController?
+    
     var videos: [Voucher]?
     
     let titleHotline = ["Chat","Saran","FAQ"]

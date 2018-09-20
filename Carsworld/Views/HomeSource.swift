@@ -11,55 +11,173 @@ import UIKit
 class HomeSource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
-    var videos: [Voucher]?
+    let menuHomeId = "menuHomeId"
+    
+    var homeController: HomeController?
+    
+    let titleApps = ["All Promo","Top Listing Promotion","News & Tips - Trick","Explore","Holiday"]
+    
+    lazy var iconTransaction: UIImageView = {
+        let img = UIImageView()
+        img.autoSetDimension(.height, toSize: 50)
+        img.autoSetDimension(.width, toSize: 50)
+        img.image = UIImage(named: "user")
+        img.layer.cornerRadius = 22
+        return img
+    }()
+    
+    lazy var titleLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "Ahmad Ardiansyah"
+        lbl.font = UIFont.boldSystemFont(ofSize: 14)
+        return lbl
+    }()
+    
+    lazy var descLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "+62 823 3409 3822"
+        lbl.font = UIFont.systemFont(ofSize: 11)
+        lbl.textColor = UIColor.gray
+        return lbl
+    }()
+    
+    lazy var createAtLabel: UILabel = {
+        let lbl = UILabel()
+        lbl.text = "Online"
+        lbl.font = UIFont.systemFont(ofSize: 10)
+        lbl.textColor = UIColor.rgb(red: 118, green: 213, blue: 114)
+        return lbl
+    }()
+    
+    lazy var saldoButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Saldo", for: .normal)
+        button.setTitleColor(warnaCarsworld, for: .normal)
+        button.layer.cornerRadius = 4.0
+        button.layer.borderColor = warnaCarsworld.cgColor
+        button.layer.borderWidth = 1.0
+        button.tintColor = warnaCarsworld
+        button.backgroundColor = .clear
+        button.autoSetDimension(.width, toSize: 64.0)
+        button.autoSetDimension(.height, toSize: 50.0)
+        button.addTarget(self, action: #selector(self.handleSaldo), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var pointButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Point", for: .normal)
+        button.setTitleColor(warnaCarsworld, for: .normal)
+        button.layer.cornerRadius = 4.0
+        button.layer.borderColor = warnaCarsworld.cgColor
+        button.layer.borderWidth = 1.0
+        button.tintColor = warnaCarsworld
+        button.backgroundColor = .clear
+        button.autoSetDimension(.width, toSize: 64.0)
+        button.autoSetDimension(.height, toSize: 50.0)
+        button.addTarget(self, action: #selector(self.handleSaldo), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var dividerProfile: UIView = {
+        let div = UIView()
+        div.autoSetDimension(.height, toSize: 0.5)
+        div.backgroundColor = UIColor(white: 0.4, alpha: 0.4)
+        return div
+    }()
     
     lazy var colView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.white
+        cv.backgroundColor = .white
         cv.dataSource = self
         cv.delegate = self
         return cv
     }()
     
-    func setupDataApi() {
-        ApiService.sharedInstance.fetchVideos { (videos: [Voucher]) in
-            self.videos = videos
-            self.colView.reloadData()
-        }
-    }
-    
     override func setupViews() {
         super.setupViews()
         
-        setupDataApi()
+        colView.register(HomeCell.self, forCellWithReuseIdentifier: cellId)
+        colView.register(MenuHomeCell.self, forCellWithReuseIdentifier: menuHomeId)
+        colView.translatesAutoresizingMaskIntoConstraints = false
         
+        addSubview(iconTransaction)
+        addSubview(titleLabel)
+        addSubview(descLabel)
+        addSubview(createAtLabel)
+        addSubview(dividerProfile)
+        addSubview(pointButton)
+        addSubview(saldoButton)
         addSubview(colView)
-        addConstraintWithFormat(format: "H:|[v0]|", views: colView)
-        addConstraintWithFormat(format: "V:|[v0]|", views: colView)
         
-        colView.register(VoucherCell.self, forCellWithReuseIdentifier: cellId)
+        iconTransaction.autoPinEdge(toSuperviewEdge: .left, withInset: 16.0)
+        iconTransaction.autoPinEdge(toSuperviewEdge: .top, withInset: 8.0)
+        
+        titleLabel.autoPinEdge(.left, to: .right, of: iconTransaction, withOffset: 16.0)
+        titleLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 10.0)
+        titleLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
+        
+        descLabel.autoPinEdge(.left, to: .right, of: iconTransaction, withOffset: 16.0)
+        descLabel.autoPinEdge(.top, to: .bottom, of: titleLabel, withOffset: 1.0)
+        descLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
+        
+        createAtLabel.autoPinEdge(.left, to: .right, of: iconTransaction, withOffset: 16.0)
+        createAtLabel.autoPinEdge(.top, to: .bottom, of: descLabel, withOffset: 4.0)
+        createAtLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
+        
+        pointButton.autoPinEdge(toSuperviewEdge: .top, withInset: 8.0)
+        pointButton.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
+        
+        saldoButton.autoPinEdge(toSuperviewEdge: .top, withInset: 8.0)
+        saldoButton.autoPinEdge(.right, to: .left, of: pointButton, withOffset: -8.0)
+        
+        dividerProfile.autoPinEdge(toSuperviewEdge: .left, withInset: 8.0)
+        dividerProfile.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
+        dividerProfile.autoPinEdge(.top, to: .bottom, of: createAtLabel, withOffset: 8.0)
+        
+        addConstraintWithFormat(format: "H:|[v0]|", views: colView)
+        addConstraintWithFormat(format: "V:|-70-[v0]|", views: colView)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos?.count ?? 0
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VoucherCell
+
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuHomeId, for: indexPath) as! MenuHomeCell
+            cell.homeController = homeController
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HomeCell
+            cell.titleApps.text = titleApps[indexPath.item]
+            cell.homeController = homeController
+
+            return cell
+        }
         
-        cell.video = videos? [indexPath.item]
-        
-        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = (frame.width - 16 - 16) * 9 / 16
-        return CGSize(width: frame.width, height: height + 16 + 88)
+        
+        if indexPath.item == 0 {
+            return CGSize(width: frame.width, height: 210)
+        } else  {
+            return CGSize(width: frame.width, height: 170)
+        }
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+    @objc func handleSaldo() {
+        print("under construction")
+        
+    }
+    
+    @objc func handlePoint() {
+        print("under construction")
     }
     
     

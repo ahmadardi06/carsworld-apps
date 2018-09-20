@@ -12,6 +12,8 @@ class HistorySource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     
     let cellId = "cellId"
     
+    var homeController: HomeController?
+    
     lazy var colView: UICollectionView = {
         let layout = UICollectionViewFlowLayout ()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
