@@ -8,12 +8,13 @@
 
 import UIKit
 
+let warnaAtasMenuBar = UIColor.rgb(red: 37, green: 94, blue: 195)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let warnaCarsworld = UIColor.rgb(red: 54, green: 118, blue: 203)
-    let warnaAtasMenuBar = UIColor.rgb(red: 37, green: 94, blue: 195)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         

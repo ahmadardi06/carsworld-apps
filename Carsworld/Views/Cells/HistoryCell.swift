@@ -46,11 +46,15 @@ class HistoryCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
         addSubview(segmentedControl)
         segmentedControl.autoPinEdge(toSuperviewEdge: .left, withInset: 8.0)
         segmentedControl.autoPinEdge(toSuperviewEdge: .right, withInset: 8.0)
-        segmentedControl.autoPinEdge(toSuperviewEdge: .top, withInset: 8.0)
+        segmentedControl.autoPinEdge(toSuperviewEdge: .top, withInset: 16.0)
         
         addSubview(colView)
-        addConstraintWithFormat(format: "H:|[v0]|", views: colView)
-        addConstraintWithFormat(format: "V:|-48-[v0]|", views: colView)
+        colView.autoPinEdge(.top, to: .bottom, of: segmentedControl, withOffset: 4.0)
+        colView.autoPinEdge(toSuperviewEdge: .left)
+        colView.autoPinEdge(toSuperviewEdge: .right)
+        colView.autoPinEdge(toSuperviewEdge: .bottom)
+//        addConstraintWithFormat(format: "H:|[v0]|", views: colView)
+//        addConstraintWithFormat(format: "V:|-54-[v0]|", views: colView)
         
         colView.register(ServiceCell.self, forCellWithReuseIdentifier: cellId)
         colView.register(UsedCarsCell.self, forCellWithReuseIdentifier: usedCarsId)
@@ -89,14 +93,6 @@ class HistoryCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.width, height: frame.height + 16)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
     
     @objc func controlChanged() {
         let indexPath = IndexPath(item: segmentedControl.selectedSegmentIndex, section: 0)

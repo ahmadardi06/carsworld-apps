@@ -49,6 +49,7 @@ class HotlineSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! HotlineCell
         cell.textLabel.text = titleHotline[indexPath.item]
         cell.iconImage.image = UIImage(named: iconHotline[indexPath.item])
+        cell.homeController = homeController
         return cell
     }
     
@@ -81,8 +82,13 @@ class HotlineSource: BaseCell, UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("index: \(indexPath.item)")
+        if indexPath.item == 1 {
+            homeController?.showSaran()
+        } else if indexPath.item == 2 {
+            homeController?.showFaq()
+        } else {
+            homeController?.showChatWith()
+        }
     }
-    
     
 }

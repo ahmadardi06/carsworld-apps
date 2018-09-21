@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class SignInController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class LupaSandiController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     
@@ -20,13 +20,13 @@ class SignInController: UICollectionViewController, UICollectionViewDelegateFlow
     
     @objc func setupMenuBar() {
         navigationController?.navigationBar.isHidden = true
-
+        
     }
     
     @objc func setupCollectionViews() {
         collectionView?.backgroundColor = warnaAtasMenuBar
         
-        collectionView?.register(LoginCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(LupaSandiCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,8 +34,8 @@ class SignInController: UICollectionViewController, UICollectionViewDelegateFlow
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LoginCell
-        cell.signInController = self
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! LupaSandiCell
+        cell.lupaSandiController = self
         return cell
     }
     
@@ -43,18 +43,8 @@ class SignInController: UICollectionViewController, UICollectionViewDelegateFlow
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
-    @objc func showSignUp() {
-        let appDetail = SignUpController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(appDetail, animated: true)
-    }
-    
-    @objc func showHome() {
-        let appDetail = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
+    @objc func showLogin() {
+        let appDetail = SignInController(collectionViewLayout: UICollectionViewFlowLayout())
         view.window?.rootViewController = UINavigationController(rootViewController: appDetail)
-    }
-    
-    @objc func showLupaSandi() {
-        let appDetail = LupaSandiController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(appDetail, animated: true)
     }
 }

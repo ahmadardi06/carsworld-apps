@@ -143,6 +143,31 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationController?.pushViewController(appDetail, animated: true)
     }
     
+    @objc func showChatWith() {
+        let appDetail = ChatController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+
+    @objc func showSaran() {
+        let appDetail = SaranController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
+    @objc func showFaq() {
+        let appDetail = FaqController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
+    @objc func showSaldo() {
+        let appDetail = SaldoController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
+    @objc func showPoint() {
+        let appDetail = PointController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(appDetail, animated: true)
+    }
+    
     @objc func handleGoldMember() {
         let layout = UICollectionViewFlowLayout()
         let memberController = MemberController(collectionViewLayout: layout)

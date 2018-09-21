@@ -18,6 +18,11 @@
 		FA12022721522CFB0011F9AF /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12022621522CFB0011F9AF /* HistoryCell.swift */; };
 		FA12022921523B740011F9AF /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA12022821523B740011F9AF /* TransactionCell.swift */; };
 		FAA108C121513183003AD703 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA108C021513183003AD703 /* AccountCell.swift */; };
+		FAC6D17821547F0D00B4CB5A /* HotlineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17721547F0D00B4CB5A /* HotlineController.swift */; };
+		FAC6D17A2154AB1C00B4CB5A /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1792154AB1C00B4CB5A /* SignUpController.swift */; };
+		FAC6D17C2154CDB400B4CB5A /* LupaSandiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */; };
+		FAC6D17E2154D12500B4CB5A /* SaldoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17D2154D12500B4CB5A /* SaldoController.swift */; };
+		FAC6D1802154D17B00B4CB5A /* PointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17F2154D17B00B4CB5A /* PointController.swift */; };
 		FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */; };
 		FAC8F4B12150C9FC00BBE54E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4B02150C9FC00BBE54E /* HomeController.swift */; };
 		FAC8F4B62150C9FD00BBE54E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC8F4B52150C9FD00BBE54E /* Assets.xcassets */; };
@@ -53,6 +58,11 @@
 		FA12022621522CFB0011F9AF /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		FA12022821523B740011F9AF /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		FAA108C021513183003AD703 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		FAC6D17721547F0D00B4CB5A /* HotlineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotlineController.swift; sourceTree = "<group>"; };
+		FAC6D1792154AB1C00B4CB5A /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LupaSandiController.swift; sourceTree = "<group>"; };
+		FAC6D17D2154D12500B4CB5A /* SaldoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaldoController.swift; sourceTree = "<group>"; };
+		FAC6D17F2154D17B00B4CB5A /* PointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointController.swift; sourceTree = "<group>"; };
 		FAC8F4AB2150C9FC00BBE54E /* Carsworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carsworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC8F4B02150C9FC00BBE54E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -169,6 +179,11 @@
 				FA08E6542153791E00F5F73E /* NotifikasiController.swift */,
 				FA08E65A2153AB2100F5F73E /* ServiceController.swift */,
 				FA08E65C2153AE4200F5F73E /* SignInController.swift */,
+				FAC6D1792154AB1C00B4CB5A /* SignUpController.swift */,
+				FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */,
+				FAC6D17D2154D12500B4CB5A /* SaldoController.swift */,
+				FAC6D17F2154D17B00B4CB5A /* PointController.swift */,
+				FAC6D17721547F0D00B4CB5A /* HotlineController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,19 +347,24 @@
 				FAC8F4DD2150E80800BBE54E /* AccountSource.swift in Sources */,
 				FAC8F4D12150E0BC00BBE54E /* SafeJson.swift in Sources */,
 				FAC8F4CB2150D08900BBE54E /* BaseCell.swift in Sources */,
+				FAC6D17821547F0D00B4CB5A /* HotlineController.swift in Sources */,
 				FAC8F4DF2150E81D00BBE54E /* VoucherSource.swift in Sources */,
 				FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */,
 				FA12022721522CFB0011F9AF /* HistoryCell.swift in Sources */,
+				FAC6D17C2154CDB400B4CB5A /* LupaSandiController.swift in Sources */,
 				FA08E65D2153AE4200F5F73E /* SignInController.swift in Sources */,
 				FAA108C121513183003AD703 /* AccountCell.swift in Sources */,
 				FAC8F4D92150E75700BBE54E /* HistorySource.swift in Sources */,
 				FA08E6532153755500F5F73E /* MemberController.swift in Sources */,
+				FAC6D17E2154D12500B4CB5A /* SaldoController.swift in Sources */,
+				FAC6D17A2154AB1C00B4CB5A /* SignUpController.swift in Sources */,
 				FAC8F4DB2150E7EB00BBE54E /* HotlineSource.swift in Sources */,
 				FAC8F4D42150E10C00BBE54E /* Api.swift in Sources */,
 				FA08E65921537FA400F5F73E /* MemberCell.swift in Sources */,
 				FAEC7A822151E96B0089A062 /* ProfileCell.swift in Sources */,
 				FAC8F4CD2150E05100BBE54E /* VoucherCell.swift in Sources */,
 				FA12022921523B740011F9AF /* TransactionCell.swift in Sources */,
+				FAC6D1802154D17B00B4CB5A /* PointController.swift in Sources */,
 				FAC8F4E32150FA6000BBE54E /* HotlineCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

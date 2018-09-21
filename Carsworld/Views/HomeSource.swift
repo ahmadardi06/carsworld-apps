@@ -51,14 +51,14 @@ class HomeSource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     
     lazy var saldoButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Saldo", for: .normal)
+        button.setTitle(" SALDO ", for: .normal)
         button.setTitleColor(warnaCarsworld, for: .normal)
-        button.layer.cornerRadius = 4.0
+//        button.layer.cornerRadius = 10
         button.layer.borderColor = warnaCarsworld.cgColor
         button.layer.borderWidth = 1.0
         button.tintColor = warnaCarsworld
         button.backgroundColor = .clear
-        button.autoSetDimension(.width, toSize: 64.0)
+        button.autoSetDimension(.width, toSize: 68.0)
         button.autoSetDimension(.height, toSize: 50.0)
         button.addTarget(self, action: #selector(self.handleSaldo), for: .touchUpInside)
         return button
@@ -66,16 +66,16 @@ class HomeSource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     
     lazy var pointButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Point", for: .normal)
+        button.setTitle(" POINT ", for: .normal)
         button.setTitleColor(warnaCarsworld, for: .normal)
-        button.layer.cornerRadius = 4.0
+//        button.layer.cornerRadius = 10
         button.layer.borderColor = warnaCarsworld.cgColor
         button.layer.borderWidth = 1.0
         button.tintColor = warnaCarsworld
         button.backgroundColor = .clear
-        button.autoSetDimension(.width, toSize: 64.0)
+        button.autoSetDimension(.width, toSize: 68.0)
         button.autoSetDimension(.height, toSize: 50.0)
-        button.addTarget(self, action: #selector(self.handleSaldo), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.handlePoint), for: .touchUpInside)
         return button
     }()
     
@@ -172,12 +172,12 @@ class HomeSource: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     @objc func handleSaldo() {
-        print("under construction")
+        homeController?.showSaldo()
         
     }
     
     @objc func handlePoint() {
-        print("under construction")
+        homeController?.showPoint()
     }
     
     

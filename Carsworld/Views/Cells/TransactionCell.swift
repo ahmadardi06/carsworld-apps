@@ -136,7 +136,7 @@ class UsedCarsCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelega
     }
     
     override func setupViews() {
-        backgroundColor = .green
+        backgroundColor = .white
         
         addSubview(colView)
         colView.register(TransactionCell.self, forCellWithReuseIdentifier: cellId)
@@ -182,7 +182,7 @@ class NewCarsCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     override func setupViews() {
-        backgroundColor = .green
+        backgroundColor = .white
         
         addSubview(colView)
         colView.register(TransactionCell.self, forCellWithReuseIdentifier: cellId)
@@ -217,7 +217,7 @@ class ShopCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -228,15 +228,15 @@ class ShopCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     override func setupViews() {
-        backgroundColor = .green
+        backgroundColor = .white
         
         addSubview(colView)
         colView.register(TransactionCell.self, forCellWithReuseIdentifier: cellId)
-        
-        colView.autoSetDimensions(to: CGSize(width: frame.width, height: frame.height))
+
         colView.autoPinEdge(toSuperviewEdge: .top, withInset: 28.0)
         colView.autoPinEdge(toSuperviewEdge: .left)
         colView.autoPinEdge(toSuperviewEdge: .right)
+        colView.autoPinEdge(toSuperviewEdge: .bottom, withInset: 24)
         
     }
     
@@ -274,7 +274,7 @@ class RentalCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     override func setupViews() {
-        backgroundColor = .green
+        backgroundColor = .white
         
         addSubview(colView)
         colView.register(TransactionCell.self, forCellWithReuseIdentifier: cellId)
