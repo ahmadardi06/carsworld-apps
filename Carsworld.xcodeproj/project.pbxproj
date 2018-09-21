@@ -23,6 +23,20 @@
 		FAC6D17C2154CDB400B4CB5A /* LupaSandiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */; };
 		FAC6D17E2154D12500B4CB5A /* SaldoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17D2154D12500B4CB5A /* SaldoController.swift */; };
 		FAC6D1802154D17B00B4CB5A /* PointController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D17F2154D17B00B4CB5A /* PointController.swift */; };
+		FAC6D1822154EC9600B4CB5A /* PromoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1812154EC9600B4CB5A /* PromoDetailController.swift */; };
+		FAC6D1862154F2A400B4CB5A /* NewCarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1852154F2A400B4CB5A /* NewCarsController.swift */; };
+		FAC6D1882154F2BA00B4CB5A /* UsedCarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1872154F2BA00B4CB5A /* UsedCarsController.swift */; };
+		FAC6D18A2154F64B00B4CB5A /* InsuranceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1892154F64B00B4CB5A /* InsuranceController.swift */; };
+		FAC6D18C2154F67400B4CB5A /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D18B2154F67400B4CB5A /* ShopController.swift */; };
+		FAC6D18E2154F68C00B4CB5A /* AuctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D18D2154F68C00B4CB5A /* AuctionController.swift */; };
+		FAC6D1902154F6A400B4CB5A /* FinanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D18F2154F6A400B4CB5A /* FinanceController.swift */; };
+		FAC6D1922154F6C800B4CB5A /* MoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1912154F6C800B4CB5A /* MoreController.swift */; };
+		FAC6D1942154F7DF00B4CB5A /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1932154F7DF00B4CB5A /* MoreCell.swift */; };
+		FAC6D1962154FC6500B4CB5A /* CarsStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1952154FC6500B4CB5A /* CarsStockController.swift */; };
+		FAC6D1982154FC8800B4CB5A /* NasmocoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1972154FC8800B4CB5A /* NasmocoController.swift */; };
+		FAC6D19A2154FCA100B4CB5A /* EmergencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D1992154FCA100B4CB5A /* EmergencyController.swift */; };
+		FAC6D19C2154FCC100B4CB5A /* MarketplaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D19B2154FCC100B4CB5A /* MarketplaceController.swift */; };
+		FAC6D19E2154FCDE00B4CB5A /* RentalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6D19D2154FCDE00B4CB5A /* RentalController.swift */; };
 		FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */; };
 		FAC8F4B12150C9FC00BBE54E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8F4B02150C9FC00BBE54E /* HomeController.swift */; };
 		FAC8F4B62150C9FD00BBE54E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC8F4B52150C9FD00BBE54E /* Assets.xcassets */; };
@@ -63,6 +77,20 @@
 		FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LupaSandiController.swift; sourceTree = "<group>"; };
 		FAC6D17D2154D12500B4CB5A /* SaldoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaldoController.swift; sourceTree = "<group>"; };
 		FAC6D17F2154D17B00B4CB5A /* PointController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointController.swift; sourceTree = "<group>"; };
+		FAC6D1812154EC9600B4CB5A /* PromoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoDetailController.swift; sourceTree = "<group>"; };
+		FAC6D1852154F2A400B4CB5A /* NewCarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCarsController.swift; sourceTree = "<group>"; };
+		FAC6D1872154F2BA00B4CB5A /* UsedCarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedCarsController.swift; sourceTree = "<group>"; };
+		FAC6D1892154F64B00B4CB5A /* InsuranceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceController.swift; sourceTree = "<group>"; };
+		FAC6D18B2154F67400B4CB5A /* ShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		FAC6D18D2154F68C00B4CB5A /* AuctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionController.swift; sourceTree = "<group>"; };
+		FAC6D18F2154F6A400B4CB5A /* FinanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceController.swift; sourceTree = "<group>"; };
+		FAC6D1912154F6C800B4CB5A /* MoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreController.swift; sourceTree = "<group>"; };
+		FAC6D1932154F7DF00B4CB5A /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		FAC6D1952154FC6500B4CB5A /* CarsStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsStockController.swift; sourceTree = "<group>"; };
+		FAC6D1972154FC8800B4CB5A /* NasmocoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasmocoController.swift; sourceTree = "<group>"; };
+		FAC6D1992154FCA100B4CB5A /* EmergencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyController.swift; sourceTree = "<group>"; };
+		FAC6D19B2154FCC100B4CB5A /* MarketplaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketplaceController.swift; sourceTree = "<group>"; };
+		FAC6D19D2154FCDE00B4CB5A /* RentalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalController.swift; sourceTree = "<group>"; };
 		FAC8F4AB2150C9FC00BBE54E /* Carsworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carsworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC8F4AE2150C9FC00BBE54E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC8F4B02150C9FC00BBE54E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -177,13 +205,26 @@
 				FAC8F4B02150C9FC00BBE54E /* HomeController.swift */,
 				FA08E6522153755500F5F73E /* MemberController.swift */,
 				FA08E6542153791E00F5F73E /* NotifikasiController.swift */,
-				FA08E65A2153AB2100F5F73E /* ServiceController.swift */,
 				FA08E65C2153AE4200F5F73E /* SignInController.swift */,
 				FAC6D1792154AB1C00B4CB5A /* SignUpController.swift */,
 				FAC6D17B2154CDB400B4CB5A /* LupaSandiController.swift */,
 				FAC6D17D2154D12500B4CB5A /* SaldoController.swift */,
 				FAC6D17F2154D17B00B4CB5A /* PointController.swift */,
 				FAC6D17721547F0D00B4CB5A /* HotlineController.swift */,
+				FAC6D1812154EC9600B4CB5A /* PromoDetailController.swift */,
+				FA08E65A2153AB2100F5F73E /* ServiceController.swift */,
+				FAC6D1852154F2A400B4CB5A /* NewCarsController.swift */,
+				FAC6D1872154F2BA00B4CB5A /* UsedCarsController.swift */,
+				FAC6D1892154F64B00B4CB5A /* InsuranceController.swift */,
+				FAC6D18B2154F67400B4CB5A /* ShopController.swift */,
+				FAC6D18D2154F68C00B4CB5A /* AuctionController.swift */,
+				FAC6D18F2154F6A400B4CB5A /* FinanceController.swift */,
+				FAC6D1952154FC6500B4CB5A /* CarsStockController.swift */,
+				FAC6D1972154FC8800B4CB5A /* NasmocoController.swift */,
+				FAC6D1992154FCA100B4CB5A /* EmergencyController.swift */,
+				FAC6D19B2154FCC100B4CB5A /* MarketplaceController.swift */,
+				FAC6D19D2154FCDE00B4CB5A /* RentalController.swift */,
+				FAC6D1912154F6C800B4CB5A /* MoreController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +260,7 @@
 				FA08E6502153334C00F5F73E /* HomeCell.swift */,
 				FA08E65621537B8B00F5F73E /* NotifikasiCell.swift */,
 				FA08E65821537FA400F5F73E /* MemberCell.swift */,
+				FAC6D1932154F7DF00B4CB5A /* MoreCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -337,11 +379,16 @@
 				FA08E65721537B8B00F5F73E /* NotifikasiCell.swift in Sources */,
 				FAC8F4C52150CF4400BBE54E /* Extension.swift in Sources */,
 				FA08E6512153334C00F5F73E /* HomeCell.swift in Sources */,
+				FAC6D1962154FC6500B4CB5A /* CarsStockController.swift in Sources */,
+				FAC6D19C2154FCC100B4CB5A /* MarketplaceController.swift in Sources */,
 				FA08E65B2153AB2100F5F73E /* ServiceController.swift in Sources */,
 				FAC8F4C92150D06500BBE54E /* MenuCell.swift in Sources */,
+				FAC6D1822154EC9600B4CB5A /* PromoDetailController.swift in Sources */,
 				FAC8F4B12150C9FC00BBE54E /* HomeController.swift in Sources */,
 				FAC8F4C72150D03600BBE54E /* MenuBar.swift in Sources */,
 				FA08E6552153791E00F5F73E /* NotifikasiController.swift in Sources */,
+				FAC6D1982154FC8800B4CB5A /* NasmocoController.swift in Sources */,
+				FAC6D18E2154F68C00B4CB5A /* AuctionController.swift in Sources */,
 				FAC8F4D62150E61B00BBE54E /* HomeSource.swift in Sources */,
 				FAC8F4CF2150E09000BBE54E /* Voucher.swift in Sources */,
 				FAC8F4DD2150E80800BBE54E /* AccountSource.swift in Sources */,
@@ -352,12 +399,19 @@
 				FAC8F4AF2150C9FC00BBE54E /* AppDelegate.swift in Sources */,
 				FA12022721522CFB0011F9AF /* HistoryCell.swift in Sources */,
 				FAC6D17C2154CDB400B4CB5A /* LupaSandiController.swift in Sources */,
+				FAC6D1902154F6A400B4CB5A /* FinanceController.swift in Sources */,
+				FAC6D1862154F2A400B4CB5A /* NewCarsController.swift in Sources */,
 				FA08E65D2153AE4200F5F73E /* SignInController.swift in Sources */,
 				FAA108C121513183003AD703 /* AccountCell.swift in Sources */,
 				FAC8F4D92150E75700BBE54E /* HistorySource.swift in Sources */,
 				FA08E6532153755500F5F73E /* MemberController.swift in Sources */,
+				FAC6D18A2154F64B00B4CB5A /* InsuranceController.swift in Sources */,
+				FAC6D1882154F2BA00B4CB5A /* UsedCarsController.swift in Sources */,
 				FAC6D17E2154D12500B4CB5A /* SaldoController.swift in Sources */,
+				FAC6D1942154F7DF00B4CB5A /* MoreCell.swift in Sources */,
 				FAC6D17A2154AB1C00B4CB5A /* SignUpController.swift in Sources */,
+				FAC6D1922154F6C800B4CB5A /* MoreController.swift in Sources */,
+				FAC6D19E2154FCDE00B4CB5A /* RentalController.swift in Sources */,
 				FAC8F4DB2150E7EB00BBE54E /* HotlineSource.swift in Sources */,
 				FAC8F4D42150E10C00BBE54E /* Api.swift in Sources */,
 				FA08E65921537FA400F5F73E /* MemberCell.swift in Sources */,
@@ -366,6 +420,8 @@
 				FA12022921523B740011F9AF /* TransactionCell.swift in Sources */,
 				FAC6D1802154D17B00B4CB5A /* PointController.swift in Sources */,
 				FAC8F4E32150FA6000BBE54E /* HotlineCell.swift in Sources */,
+				FAC6D18C2154F67400B4CB5A /* ShopController.swift in Sources */,
+				FAC6D19A2154FCA100B4CB5A /* EmergencyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

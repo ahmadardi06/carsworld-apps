@@ -57,7 +57,7 @@ class HomeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,8 +74,9 @@ class HomeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        homeController?.showAppDetail()
         print("item mobil detail")
+        let layout = UICollectionViewFlowLayout()
+        homeController?.showAppDetail(controller: PromoDetailController(collectionViewLayout: layout))
     }
     
 }
@@ -137,6 +138,16 @@ class MenuHomeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelega
     
     let menuIcon = ["service","newcars","usedcar","insurance","carsworldshop","auction","finance","more-2"]
     let menuText = ["Service","New Cars","Used Cars","Insurance","Carsworld Shop","Auction","Finance","More"]
+    let menuController = [
+        ServiceController(collectionViewLayout: UICollectionViewFlowLayout()),
+        NewCarsController(collectionViewLayout: UICollectionViewFlowLayout()),
+        UsedCarsController(collectionViewLayout: UICollectionViewFlowLayout()),
+        InsuranceController(collectionViewLayout: UICollectionViewFlowLayout()),
+        ShopController(collectionViewLayout: UICollectionViewFlowLayout()),
+        AuctionController(collectionViewLayout: UICollectionViewFlowLayout()),
+        FinanceController(collectionViewLayout: UICollectionViewFlowLayout()),
+        MoreController(collectionViewLayout: UICollectionViewFlowLayout())
+    ]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuIcon.count
@@ -167,7 +178,7 @@ class MenuHomeCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        homeController?.showMenuDetail()
+        homeController?.showMenuDetail(controller: menuController[indexPath.item])
     }
     
 }

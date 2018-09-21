@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class ServiceController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ShopController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     
@@ -21,9 +21,9 @@ class ServiceController: UICollectionViewController, UICollectionViewDelegateFlo
     @objc func setupMenuBar() {
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.navigationBar.isTranslucent = false
-        navigationItem.title = "Service"
+        navigationItem.title = "Carsworld Shop"
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
     @objc func setupCollectionViews() {

@@ -128,14 +128,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         navigationItem.rightBarButtonItems = [goldBtn, notifBtn]
     }
     
-    @objc func showAppDetail() {
-        let appDetail = UIViewController()
-        navigationController?.pushViewController(appDetail, animated: true)
+    @objc func showAppDetail(controller: UICollectionViewController) {
+        navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc func showMenuDetail() {
-        let appDetail = ServiceController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(appDetail, animated: true)
+    @objc func showMenuDetail(controller: UICollectionViewController) {
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func showSignIn() {
