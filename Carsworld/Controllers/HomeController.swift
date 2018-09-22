@@ -138,7 +138,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     @objc func showSignIn() {
         let appDetail = SignInController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(appDetail, animated: true)
+        view.window?.rootViewController = UINavigationController(rootViewController: appDetail)
     }
     
     @objc func showChatWith() {
